@@ -4,12 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const weatherRoute_1 = __importDefault(require("./routes/weatherRoute"));
+const weatherRoutes_1 = __importDefault(require("./routes/weatherRoutes"));
 const app = (0, express_1.default)();
 const PORT = 3000;
 app.use(express_1.default.json());
 // Our new route
-app.use("/api/weather", weatherRoute_1.default);
+app.use("/api/weather", weatherRoutes_1.default);
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
